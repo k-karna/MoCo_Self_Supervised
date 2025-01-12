@@ -23,4 +23,12 @@ Next, we are experiment with only 10 epochs (for not having GPU). Our results ar
 
 ```
 
-Certainly, we need to train on ``unlabeled set`` for almost upto $100$ epoch as in __MoCo__ paper, and that will happen when we get access to GPU. 
+
+Certainly, we need to train on ``unlabeled set`` for almost upto $100$ epoch as in __MoCo__ paper, and that will happen when we get access to GPU.
+
+Ran one more time, with increased ``num_epochs`` to 20 for ResNet18 ``base_encoder``. Results improved. We definitely need to run the model for 100.
+
+
+| Ex. No. | Base Encoder | MLP Head | Queue Size | Mtm |Temp. | Trainable Params |Num Epochs | Learning Rate | Training Time (on unlabeled) | Accuracy on TrainingSet | Accuracy on TestSet|
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ----- | ------| -------| ----| --- |
+| 1 | ResNet18  | False | 65,536 | 0.999 | 0.07 |11,242,176 | 10 | 0.001 | 16 Hours 8 Min| 46.24% | 30.63% |
